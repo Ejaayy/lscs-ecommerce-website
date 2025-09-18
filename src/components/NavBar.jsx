@@ -43,7 +43,7 @@ export default function Navbar({ searchQuery, onSearchChange, cartCount }) {
           </div>
 
           {/* Buttons */}
-          <div className="flex items-center justify-end gap-3">
+          <div className="flex items-center justify-end gap-3 ml-6">
             <a
               href="/login"
               className="hidden sm:inline-flex items-center justify-center rounded-xl bg-white 

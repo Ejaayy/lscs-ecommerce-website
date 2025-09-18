@@ -2,48 +2,58 @@ export default function LandingPage() {
   return (
     <div className="relative bg-neutral">
 
-      {/* Navbar */}
-      <header className="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-lg 
-        border border-gray-100 bg-white/80 py-3 shadow backdrop-blur-lg 
-        md:top-6 md:rounded-3xl">
-        <div className="px-4">
-          <nav className="flex items-center justify-between h-16">
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              TindaHub
-            </h1>
-            <div className="hidden md:flex gap-5">
-              <a href="#products" className="hover:text-primary">Products</a>
-              <a href="#features" className="hover:text-primary">Features</a>
-            </div>
-            <div className="flex gap-3">
-              <a href="/login" className="px-3 py-2 rounded-lg bg-white ring-1 ring-gray-300 shadow hover:bg-gray-50">
-                Sign in
-              </a>
-              <a href="/login" className="px-3 py-2 rounded-lg bg-primary text-white shadow hover:bg-secondary">
-                Login
-              </a>
-            </div>
-          </nav>
-        </div>
-      </header>
+    {/* Hero Section */}
+    <section className="pt-44 pb-20 text-center bg-gradient-to-b from-primary/10 to-white">
+      {/* Tagline */}
+      <p className="text-sm uppercase tracking-wider text-secondary mb-4">
+        Smarter Shopping, Simplified
+      </p>
 
-      {/* Hero Section */}
-      <section className="pt-32 pb-20 text-center bg-gradient-to-b from-primary/10 to-white">
-        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-          Welcome to TindaHub
-        </h2>
-        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-          Discover products, compare prices, and shop smarter with our all-in-one platform.
-        </p>
-        <div className="mt-8 flex justify-center gap-4">
-          <a href="#products" className="px-6 py-3 rounded-lg bg-primary text-white font-semibold hover:bg-secondary">
-            Get Started
-          </a>
-          <a href="#features" className="px-6 py-3 rounded-lg bg-accent text-white font-semibold hover:bg-primary">
-            Learn More
-          </a>
-        </div>
-      </section>
+      {/* Main Heading */}
+      <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+        Welcome to TindaHub
+      </h2>
+
+      {/* Subtext */}
+      <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
+        Discover products, compare prices, and shop smarter with our all-in-one platform.
+      </p>
+
+      {/* Primary Actions */}
+      <div className="flex flex-wrap justify-center gap-4 mb-6">
+        <a
+          href="#get-started"
+          className="px-8 py-3 rounded-xl bg-primary text-white font-semibold shadow-md hover:bg-secondary transition"
+        >
+          Get Started
+        </a>
+        <a
+          href="#ProductsPage"
+          className="px-8 py-3 rounded-xl bg-accent text-white font-semibold shadow-md hover:bg-primary transition"
+        >
+          Explore Store
+        </a>
+      </div>
+
+      {/* Secondary Actions */}
+      <div className="flex flex-wrap justify-center gap-6 text-sm font-medium text-gray-600">
+        <a href="#features" className="hover:text-primary transition-colors">
+          Features
+        </a>
+        <a href="#reviews" className="hover:text-primary transition-colors">
+          Reviews
+        </a>
+        <a href="#faq" className="hover:text-primary transition-colors">
+          FAQ
+        </a>
+        <a href="#support" className="hover:text-primary transition-colors">
+          Support
+        </a>
+        <a href="#contact" className="hover:text-primary transition-colors">
+          Contact Us
+        </a>
+      </div>
+    </section>
 
       {/* Features Section */}
       <section id="features" className="py-16 max-w-6xl mx-auto px-4 grid gap-8 md:grid-cols-3">
