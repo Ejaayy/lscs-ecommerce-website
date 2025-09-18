@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import ProductCard from "../components/ProductCard.jsx";
 import Navbar from "../components/NavBar.jsx";
 
-export default function ProductsPage() {
+export default function ProductsPage({ searchQuery }) {  //accept searchQuery
   const [products, setProducts] = useState([]); // will hold the list of products from the API
   const [loading, setLoading] = useState(true); // tracks if data is still being fetched
   const [error, setError] = useState(null); // stores any error message if API fails
@@ -25,12 +25,16 @@ export default function ProductsPage() {
   if (loading) return <p className="text-center mt-10">Loading...</p>;
   if (error) return <p className="text-center mt-10 text-red-500">{error}</p>;
 
+  // filter products based on search query
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   //if data loaded correctly, load this
   return (
-    <div>
-        <Navbar />
+    <div id="products">   
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 p-6 relative bg-neutral">
-        {products.map((product) => (
+        {filteredProducts.map((product) => (
             <div
             key={product.id}
             className="border rounded-lg shadow-sm p-4 bg-white hover:shadow-md transition hover:border-primary"

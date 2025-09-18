@@ -10,8 +10,13 @@ export default function LandingPage() {
       </p>
 
       {/* Main Heading */}
-      <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-        Welcome to TindaHub
+      <h2 className="text-5xl font-extrabold mb-6">
+        <span className="bg-gradient-to-r from-accent to-primary bg-clip-text text-transparent">
+          Welcome to
+        </span>{" "}
+        <span className="text-[#5a3724]">
+          TindaHub
+        </span>
       </h2>
 
       {/* Subtext */}

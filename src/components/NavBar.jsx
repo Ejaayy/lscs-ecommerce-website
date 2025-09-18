@@ -1,4 +1,4 @@
-export default function Navbar({ searchQuery, onSearchChange, cartCount }) {
+export default function Navbar({ searchQuery, onSearchChange}) {
   return (
 <header className="fixed inset-x-0 top-0 z-30 mx-auto w-full max-w-screen-xl  
     border border-gray-300 bg-neutral/100 py-3 shadow-md md:top-6 md:rounded-3xl lg:max-w-screen-xl">
@@ -20,11 +20,19 @@ export default function Navbar({ searchQuery, onSearchChange, cartCount }) {
               placeholder="Search products..."
               value={searchQuery}
               onChange={(e) => onSearchChange(e.target.value)}
+
+              onKeyDown={(e) => {
+                if (e.key === "Enter") {
+                  onSearchChange(e.target.value);
+                  const el = document.getElementById("products");
+                  if (el) el.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
               className="w-full rounded-xl border border-gray-300 px-4 py-2 focus:outline-none focus:ring-2 focus:ring-primary"
             />
           </div>
 
-          {/* Links (Desktop) */}
+          {/* Links */}
           <div className="hidden md:flex items-center gap-5">
             <a
               href="#products"
