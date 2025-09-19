@@ -11,6 +11,7 @@ export default {
         secondary: '#4B3F2F',   // dark brown (matches hut roof)
         accent: '#FBBF24',      // lighter orange/yellow (for highlights)
         neutral: '#fffbec',     // light beige background
+        customgold: '#e2c99c',  // self made custom color
       },
     },
   },

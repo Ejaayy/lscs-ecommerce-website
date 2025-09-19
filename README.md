@@ -3,6 +3,8 @@
 TindaHub is a simple e-commerce web app built with **React** and **Tailwind CSS**.  
 It lets users browse products, search easily, and shop with a clean modern UI.  
 
+![TindaHub Preview](landingpagess.png)
+
 ## Features  
 - Product listing from [Fake Store API](https://fakestoreapi.com/)  
 - Search bar with smooth scroll to products  
