@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom text shadows */
+
+/* For Large headings */
+.heading-shadow-lg {
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+.heading-shadow-xl {
+  text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+}
+
+.heading-shadow-2xl {
+  text-shadow: 4px 4px 14px rgba(0,0,0,0.8);
+}
+
+/* For Smaller texts */
+.text-shadow-sm {
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.7);
+}
+
+.text-shadow-md {
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+.text-shadow-lg-small {
+  text-shadow: 3px 3px 8px rgba(0,0,0,0.8);
+}
+
+.text-shadow-xl-small {
+  text-shadow: 4px 4px 12px rgba(0,0,0,0.85);
+}
